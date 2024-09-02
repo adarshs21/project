@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <form id="emergencyForm">
+        <h2>Emergency Contact Page</h2>
+
+        <label for="phoneNumber">Enter your phone number:</label>
+        <input type="tel" id="phoneNumber" name="phoneNumber" pattern="[0-9]{10}" placeholder="Enter 10 digit phone number" required>
+
+        <button type="button" onclick="getLocation()">Auto Select Nearest Hospital</button>
+
+        <select id="hospitalSelect">
+            <option value="" disabled selected>Select a hospital</option>
+            <option value="option1">Sum Ultimate</option>
+            <option value="option2">Sum Hospital</option>
+            <option value="option3">AIIMS</option>
+            <option value="option4">IKCG Multipeciality</option>
+        </select>
+
+        <button type="submit">Call Hospital</button>
+    </form>
+
+    <!-- Add Static Map Section -->
+    <div id="map-container">
+        <h1>Static Map Centered Around User Location</h1>
+        <img id="map" src="https://www.openstreetmap.org/export/embed.html?bbox=-122.4294%2C37.7649%2C-122.4094%2C37.7849&amp;layer=mapnik" alt="Map">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
